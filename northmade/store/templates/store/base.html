@@ -1,0 +1,11 @@
+<h1>Welcome to NorthMade</h1>
+    <p>Discover the finest Indian spices.</p>
+
+    <div class="categories">
+        <h2>Shop by Category</h2>
+        <ul>
+            {% for category in categories %}
+                <li><a href="#">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>

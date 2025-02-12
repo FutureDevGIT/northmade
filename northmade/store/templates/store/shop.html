@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NorthMade - Shop</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
+</head>
+<body>
+
+    <h1>Shop All Spices</h1>
+
+    <div class="products">
+        {% for product in products %}
+            <div class="product">
+                <a href="{% url 'product_detail' pk=product.pk %}">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.price }}</p>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
